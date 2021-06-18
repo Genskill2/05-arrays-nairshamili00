@@ -49,37 +49,34 @@ int main(void) {
   assert (ret[1] == 13);
   printf("Factors: passed\n");
 }
- int max(int x[], int n)
+ int max(int a[],int n)
  {
-  int max,i;
- 	max=x[0];
-    for(i=1; i<n; i++)
-    {
-      
-		   if(max<x[i])
-		    max=x[i];       
-    } return max;
+ int max=0;
+ for(int i=0;i<n;i++)
+  {
+  if(a[i]>max)
+  	max=a[i];
+  }
+  return max;
  }
-int min(int x[], int n)
+int min(int a[],int n)
 {
-  int min,i;
- 	min=x[0];
-    for(i=1; i<n; i++)
-    {
-      
-		   if(min>x[i])
-		    min=x[i];       
-    } return min;
- }
-float average(int x[], int n)
+int min=a[0];
+for(int i=0;i<n;i++)
 {
- int i;
- float sum=0.0;
- for(i=0;i< n;i++)
+if(a[i]<min)
+	min=a[i];
+}
+return min;
+}
+float average(int a[],int n)
+{
+float sum=0;
+for(int i=0;i<n;i++)
  {
-  sum = sum + x[i];
+ sum=sum+a[i];
  }
- return(sum/n);
+return sum/n;
 }
 int mode(int x[], int n)
 {
